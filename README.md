@@ -1,15 +1,11 @@
 # Node PDF
-Node PDF is a set of tools that takes in PDF files and converts them to usable formats for data processing. The library supports both extracting text from searchable pdf files as well as performing OCR on pdfs which are just scanned images of text
-
-[![Build Status](https://travis-ci.org/nisaacson/pdf-extract.png)](https://travis-ci.org/nisaacson/pdf-extract)
+Node PDF is a set of tools that takes in PDF files and converts them to usable formats for data processing. 
+The library supports both extracting text from searchable pdf files as well as performing OCR on pdfs which are 
+just scanned images of text.
 
 ## Installation
 
-To begin install the module.
-
-`npm install pdf-extract`
-
-After the library is installed you will need the following binaries accessible on your path to process pdfs.
+Before runing the code you will need the following binaries accessible on your path to process pdfs.
 
 - pdftk
     - pdftk splits multi-page pdf into single pages.
@@ -160,8 +156,6 @@ processor.on('complete', data => callback(null, data))
 processor.on('error', callback)
 function callback (error, data) { error ? console.error(error) : console.log(data.text_pages[0]) }
 ```
-
-
 
 ### Text extract from searchable pdf
 Extract from a pdf file which contains actual searchable text
